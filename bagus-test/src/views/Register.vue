@@ -44,7 +44,7 @@ export default {
                                         <label class="form-label" for="form3Example4cg">Password</label>
                                     </div>
                                     <div class="form-check d-flex justify-content-center mb-5">
-                                        <input class="form-check-input me-2" type="checkbox" value=""
+                                        <input v-model="register.ok" class="form-check-input me-2" type="checkbox" value=""
                                             id="form2Example3cg" required/>
                                         <label class="form-check-label" for="form2Example3g">
                                             To register with us please tick to agree to our<a href="#!" class="text-body"><br><u>Terms and Conditions.</u></a>
@@ -52,11 +52,11 @@ export default {
                                     </div>
 
                                     <div class="d-flex justify-content-center">
-                                        <button @click="registerAccount" type="submit"
+                                        <button @click.prevent="registerAccount" type="submit"
                                             class="btn btn-info btn-block btn-lg text-body">Register</button>
                                     </div>
 
-                                    <p class="text-center text-muted mt-5 mb-0">Have already an account? <RouterLink to="/login" href="#!"
+                                    <p class="text-center text-muted mt-5 mb-0">Have already an account? <RouterLink to="/" href="#!"
                                             class="fw-bold text-body"><u>Login here</u></RouterLink></p>
 
                                 </form>
